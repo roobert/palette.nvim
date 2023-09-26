@@ -1,0 +1,116 @@
+core:
+  normal_text:
+    foreground: color8
+
+  regular_file:
+    foreground: color5
+
+  reset_to_normal:
+    foreground: color8
+
+  directory:
+    foreground: color3
+    font-style: bold
+
+  symlink:
+    foreground: hint
+    font-style: bold
+
+  multi_hard_link: {}
+
+  fifo:
+    foreground: accent2
+    font-style: bold
+
+  socket:
+    foreground: accent5
+    font-style: bold
+
+  door:
+    foreground: accent6
+    font-style: bold
+
+  block_device:
+    foreground: accent2
+    font-style: bold
+
+  character_device:
+    foreground: accent2
+    font-style: bold
+
+  broken_symlink:
+    foreground: error
+    font-style: bold
+
+  missing_symlink_target:
+    foreground: error
+    font-style: bold
+
+  setuid: {}
+
+  setgid: {}
+
+  file_with_capability: {}
+
+  sticky_other_writable: {}
+
+  other_writable: {}
+
+  sticky: {}
+
+  executable_file:
+    foreground: ok
+    font-style: bold
+
+text:
+  special:
+    foreground: color8
+    font-style: bold
+
+  todo:
+    foreground: info
+    font-style: bold
+
+  licenses:
+    foreground: color8
+
+  configuration:
+    foreground: info
+
+  other:
+    foreground: color6
+
+markup:
+  foreground: accent0
+
+programming:
+  foreground: color8
+  font-style: bold
+
+media:
+  image:
+    foreground: color5
+
+  audio:
+    foreground: accent4
+
+  video:
+    foreground: accent5
+    font-style: bold
+
+  fonts:
+    foreground: accent6
+
+office:
+  foreground: accent1
+
+archives:
+  foreground: error
+  font-style: bold
+
+executable:
+  foreground: ok
+  font-style: bold
+
+unimportant:
+  foreground: color3

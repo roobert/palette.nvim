@@ -1,0 +1,139 @@
+colors:
+  color0: '191d33'
+  color1: '1A1E39'
+  color2: '383f5e'
+  color3: '4e5470'
+  color4: '7b7f94'
+  color5: 'a7a9b7'
+  color6: 'bdbfc9'
+  color7: 'd3d4db'
+  color8: 'e9e9ed'
+  error: 'D66A6A'
+  hint: 'D6CC6A'
+  info: '6AB7D6'
+  ok: '6AD682'
+  warning: 'D6956A'
+  accent0: 'D97C8F'
+  accent1: 'D9AE7E'
+  accent2: 'D9D87E'
+  accent3: 'A5D9A7'
+  accent4: '8BB9C8'
+  accent5: 'C9A1D3'
+  accent6: 'B8A1D9'
+
+core:
+  normal_text:
+    foreground: color8
+
+  regular_file:
+    foreground: color5
+
+  reset_to_normal:
+    foreground: color8
+
+  directory:
+    foreground: color3
+    font-style: bold
+
+  symlink:
+    foreground: hint
+    font-style: bold
+
+  multi_hard_link: {}
+
+  fifo:
+    foreground: accent2
+    font-style: bold
+
+  socket:
+    foreground: accent5
+    font-style: bold
+
+  door:
+    foreground: accent6
+    font-style: bold
+
+  block_device:
+    foreground: accent2
+    font-style: bold
+
+  character_device:
+    foreground: accent2
+    font-style: bold
+
+  broken_symlink:
+    foreground: error
+    font-style: bold
+
+  missing_symlink_target:
+    foreground: error
+    font-style: bold
+
+  setuid: {}
+
+  setgid: {}
+
+  file_with_capability: {}
+
+  sticky_other_writable: {}
+
+  other_writable: {}
+
+  sticky: {}
+
+  executable_file:
+    foreground: ok
+    font-style: bold
+
+text:
+  special:
+    foreground: color8
+    font-style: bold
+
+  todo:
+    foreground: info
+    font-style: bold
+
+  licenses:
+    foreground: color8
+
+  configuration:
+    foreground: info
+
+  other:
+    foreground: color6
+
+markup:
+  foreground: accent0
+
+programming:
+  foreground: color8
+  font-style: bold
+
+media:
+  image:
+    foreground: color5
+
+  audio:
+    foreground: accent4
+
+  video:
+    foreground: accent5
+    font-style: bold
+
+  fonts:
+    foreground: accent6
+
+office:
+  foreground: accent1
+
+archives:
+  foreground: error
+  font-style: bold
+
+executable:
+  foreground: ok
+  font-style: bold
+
+unimportant:
+  foreground: color3
