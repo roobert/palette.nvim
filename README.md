@@ -7,26 +7,40 @@
 <p align="center">
     <img src="https://github.com/roobert/dust.nvim/assets/226654/0269e89c-f7fe-4da8-9e9a-5d385a3f0236" />
 </p>
+
 ## About
+
 _Palette_ is a Neovim theme system to make creating and customising themes easy.
+
 Highlight groups are logically organised to create a balanced contrast that emphasizes clarity at the same time as being aesthetically pleasing.
+
 ## Theory
+
 The theme is broken up into three sets of colors: _main_, _accent_, and _state_.
+
 ### Main Colors
+
 The main colors are used for the background, cursorline color, and to color the code and comments.
+
 ![Main colors screenshot](https://github.com/roobert/palette.nvim/assets/226654/49e7d588-2eef-47c9-81b2-c6981c3a1f20)
+
 ### Accent Colors
+
 Accent colors can be used to bring special attention to highlight groups, in this case _constants_ and _integers_ are highlighted with colors not in the main palette:
 ![Accent colors screenshot](https://github.com/roobert/palette.nvim/assets/226654/ab60360e-1c6f-4409-8bd0-75d0e55e0e4a)
+
 ### State Colors
+
 There are five different state colors which represent:
+
 - `error`
 - `warn`
 - `hint`
 - `ok`
 - `info`
-These are used by Diagnostics, git, etc. Anywhere where a state is represented:
-![Accent colors screenshot](https://github.com/roobert/palette.nvim/assets/226654/3cf08b8d-28aa-4b47-8056-fb1a51036e6e)
+  These are used by Diagnostics, git, etc. Anywhere where a state is represented:
+  ![Accent colors screenshot](https://github.com/roobert/palette.nvim/assets/226654/3cf08b8d-28aa-4b47-8056-fb1a51036e6e)
+
 ## Built-In Colors
 
 There are two built-in _main_ palettes: _dark_ and _light_.
