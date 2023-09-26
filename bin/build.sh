@@ -20,3 +20,5 @@ sed -i '' -e "s/vim.g.colors_name = \"palette\"/vim.g.colors_name = \"${THEME_NA
 sed -i '' -e "s/main = \"dark\"/main = \"${MAIN_PALETTE_NAME}\"/g" "${THEME_DIR}/lua/${THEME_NAME}/init.lua"
 sed -i '' -e "s/accent = \"pastel\"/accent = \"${ACCENT_PALETTE_NAME}\"/g" "${THEME_DIR}/lua/${THEME_NAME}/init.lua"
 sed -i '' -e "s/state = \"pastel\"/state = \"${STATE_PALETTE_NAME}\"/g" "${THEME_DIR}/lua/${THEME_NAME}/init.lua"
+
+echo "# ${THEME_NAME}" >${THEME_DIR}/README.md
