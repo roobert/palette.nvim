@@ -5,7 +5,7 @@
   Beautiful, Versatile, Systematic
 </p>
 <p align="center">
-    <img src="https://github.com/roobert/dust.nvim/assets/226654/0269e89c-f7fe-4da8-9e9a-5d385a3f0236" />
+    <img src="https://github.com/roobert/palette.nvim/assets/226654/56afa310-04f0-42cc-9901-a212d1853ee7" />
 </p>
 
 ## About
@@ -22,12 +22,12 @@ The theme is broken up into three sets of colors: _main_, _accent_, and _state_.
 
 The main colors are used for the background, cursorline color, and to color the code and comments.
 
-![Main colors screenshot](https://github.com/roobert/palette.nvim/assets/226654/49e7d588-2eef-47c9-81b2-c6981c3a1f20)
+![Main colors screenshot](https://github-production-user-asset-6210df.s3.amazonaws.com/226654/270648812-f229d2a0-7b99-425e-bffc-062bf387c4d8.png)
 
 ### Accent Colors
 
 Accent colors can be used to bring special attention to highlight groups, in this case _constants_ and _integers_ are highlighted with colors not in the main palette:
-![Accent colors screenshot](https://github.com/roobert/palette.nvim/assets/226654/ab60360e-1c6f-4409-8bd0-75d0e55e0e4a)
+![Accent colors screenshot](https://github.com/roobert/palette.nvim/assets/226654/2d7ff03c-f1d5-46b9-9359-973fcf7002ed)
 
 ### State Colors
 
@@ -39,7 +39,7 @@ There are five different state colors which represent:
 - `ok`
 - `info`
   These are used by Diagnostics, git, etc. Anywhere where a state is represented:
-  ![Accent colors screenshot](https://github.com/roobert/palette.nvim/assets/226654/3cf08b8d-28aa-4b47-8056-fb1a51036e6e)
+  ![Accent colors screenshot](https://github-production-user-asset-6210df.s3.amazonaws.com/226654/270648776-623c7916-adcd-4d8e-a2f2-e0c28353af65.png)
 
 ## Built-In Colors
 
@@ -134,15 +134,15 @@ See an example of a derived theme in the next section.
 
 Built-in _dark_ _main_ palette:
 
-![Palette built-in dark theme](https://github.com/roobert/dust.nvim/assets/226654/0269e89c-f7fe-4da8-9e9a-5d385a3f0236)
+![Palette built-in dark theme](https://github.com/roobert/palette.nvim/assets/226654/56afa310-04f0-42cc-9901-a212d1853ee7)
 
 Built-in _light_ _main_ palette:
 
-![Palette built-in light theme](https://github.com/roobert/palette.nvim/assets/226654/ec8cfb17-8863-4082-a600-68dd0810480a)
+![Palette built-in light theme](https://github.com/roobert/palette.nvim/assets/226654/43544e66-92b9-41b2-87f2-4f944a2e2bb4)
 
 A custom derived theme inspired by Life Aquatic's Team Zissou colors:
 
-![Team Zissou theme](https://github.com/roobert/palette.nvim/assets/226654/62c1cd99-4465-4671-b315-ef14dc9b7471)
+![Team Zissou theme](https://github.com/roobert/palette.nvim/assets/226654/2d92821a-dd78-4828-b08e-1557a5665856)
 
 ## 🛠️ Install
 
@@ -371,7 +371,7 @@ Alternatively highlight groups can be overridden in the normal way:
 
 > [Vivid](https://github.com/sharkdp/vivid) is a generator for the `LS_COLORS` environment variable that controls the colorized output of ls, tree, fd, bfs, dust and many other tools.
 
-![Custom LS_COLORS screenshot](https://github.com/roobert/dust.nvim/assets/226654/21c5285a-f3af-4775-aa9e-4075b1b85de7)
+![Custom LS_COLORS screenshot](https://github.com/roobert/palette.nvim/assets/226654/e7e5ac09-dfbd-4fa6-b258-8f2da9332511)
 
 Use the `vivid.lua` script to generate a `vivid` config file:
 
