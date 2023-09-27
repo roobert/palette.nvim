@@ -14,6 +14,12 @@ _Palette_ is a Neovim theme system to make creating and customising themes easy.
 
 Highlight groups are logically organised to create a balanced contrast that emphasizes clarity at the same time as being aesthetically pleasing.
 
+Caching ensures themes are performant.
+
+Build easily distributable themes using the provided `build` script.
+
+Generate other application color schemes, such as `LS_COLORS` for matching terminal feel.
+
 ## Theory
 
 The theme is broken up into three sets of colors: _main_, _accent_, and _state_.
