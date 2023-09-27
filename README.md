@@ -7,6 +7,7 @@
 <p align="center">
     <img src="https://github.com/roobert/palette.nvim/assets/226654/56afa310-04f0-42cc-9901-a212d1853ee7" />
 </p>
+
 ## About
 
 _Palette_ is a Neovim theme system to make creating and customising themes easy.
@@ -370,7 +371,7 @@ Alternatively highlight groups can be overridden in the normal way:
 
 ## Support for `LS_COLORS`
 
-> [Vivid](https://github.com/sharkdp/vivid) is a generator for the `LS_COLORS` environment variable that controls the colorized output of ls, tree, fd, bfs, dust and many other tools.
+> [Vivid](https://github.com/sharkdp/vivid) is a generator for the `LS_COLORS` environment variable that controls the colorized output of `ls`, `tree`, `fd`, `bfs`, `dust` and many other tools.
 
 ![Custom LS_COLORS screenshot](https://github.com/roobert/palette.nvim/assets/226654/e7e5ac09-dfbd-4fa6-b258-8f2da9332511)
 
