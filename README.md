@@ -377,7 +377,7 @@ Alternatively highlight groups can be overridden in the normal way:
 
 ## Caching
 
-To disable caching or set a custom cache path:
+To adjust caching or set a custom cache path:
 
 ```lua
 {
