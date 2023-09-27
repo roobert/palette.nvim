@@ -12,7 +12,7 @@
 
 _Palette_ is a Neovim theme system to make creating and customising themes easy.
 
-Highlight groups are logically organised to create a balanced contrast that emphasizes clarity at the same time as being aesthetically pleasing.
+Highlight groups are logically arranged to strike a harmonious balance between clarity and aesthetic appeal.
 
 Caching ensures themes are performant.
 
