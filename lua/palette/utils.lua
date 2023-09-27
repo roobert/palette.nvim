@@ -150,7 +150,6 @@ M.apply_highlight_groups = function(highlights, caching)
 	if caching then
 		local _cache_path = cache_path(cache_key)
 		if _cache_path then
-			print("LOADING CACHE: " .. _cache_path)
 			vim.cmd("source " .. _cache_path)
 			return
 		end
