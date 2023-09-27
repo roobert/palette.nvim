@@ -38,7 +38,9 @@ There are five different state colors which represent:
 - `hint`
 - `ok`
 - `info`
+
   These are used by Diagnostics, git, etc. Anywhere where a state is represented:
+
   ![Accent colors screenshot](https://github-production-user-asset-6210df.s3.amazonaws.com/226654/270648776-623c7916-adcd-4d8e-a2f2-e0c28353af65.png)
 
 ## Built-In Colors
