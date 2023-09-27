@@ -6,13 +6,18 @@ local config = {
 		accent = "pastel",
 		state = "pastel",
 	},
+
 	custom_palettes = {
 		main = {},
 		accent = {},
 		state = {},
 	},
+
 	italics = true,
 	transparent_background = false,
+
+	caching = true,
+	cache_dir = vim.fn.stdpath("cache") .. "/palette",
 }
 
 M.setup = function(opts)
@@ -43,7 +48,7 @@ function M.load()
 	local highlights = require("palette.highlights")
 
 	-- load the colorscheme mappings
-	require("palette.utils").apply_highlight_groups(highlights)
+	require("palette.utils").apply_highlight_groups(highlights, config["caching"])
 end
 
 return M

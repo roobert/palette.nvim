@@ -7,9 +7,7 @@
 <p align="center">
     <img src="https://github.com/roobert/palette.nvim/assets/226654/56afa310-04f0-42cc-9901-a212d1853ee7" />
 </p>
-
 ## About
-
 _Palette_ is a Neovim theme system to make creating and customising themes easy.
 
 Highlight groups are logically organised to create a balanced contrast that emphasizes clarity at the same time as being aesthetically pleasing.
@@ -131,6 +129,12 @@ This works by the user specifying a base color and the base palette which is the
 Note: The resulting colors will match the length of the source color table.
 
 See an example of a derived theme in the next section.
+
+## Caching
+
+_Palette_ implements automatic caching.
+
+The cache is stored in the `palette` (or theme name, if a distributable) directory under your users cache directory, typically: `~/.cache/nvim/palette/`
 
 ## Gallery
 
@@ -365,6 +369,27 @@ Alternatively highlight groups can be overridden in the normal way:
     -- example of specific highlight group override using palette color
     a = require("palette.theme").accent
     vim.cmd([[highlight Normal guifg=a.accent0]])
+  end,
+},
+```
+
+## Caching
+
+To disable caching or set a custom cache path:
+
+```lua
+{
+  "roobert/palette.nvim",
+  lazy = false,
+  priority = 1000,
+  config = function()
+    require("palette").setup({
+      caching = true,
+      -- typically: ~/.cache/nvim/palette/
+      cache_dir = vim.fn.stdpath("cache") .. "/palette",
+    })
+
+    vim.cmd([[colorscheme palette]])
   end,
 },
 ```

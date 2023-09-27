@@ -19,7 +19,8 @@ M.rgb2hsl = function(rgb)
 	local h, s, l = (max + min) / 2, (max + min) / 2, (max + min) / 2
 
 	if max == min then
-		h, s = 0, 0 -- achromatic
+		-- achromatic
+		h, s = 0, 0
 	else
 		local delta = max - min
 		s = l > 0.5 and delta / (2 - max - min) or delta / (max + min)
@@ -40,7 +41,8 @@ M.hsl2rgb = function(hsl)
 	local r, g, b
 
 	if hsl.s == 0 then
-		r, g, b = hsl.l, hsl.l, hsl.l -- achromatic
+		-- achromatic
+		r, g, b = hsl.l, hsl.l, hsl.l
 	else
 		local function hue2rgb(p, q, t)
 			if t < 0 then
@@ -85,13 +87,76 @@ function M.darken(hex, percent)
 	return M.rgb2hex(M.hsl2rgb(hsl))
 end
 
+local function path_join(base, relative)
+	if relative:sub(1, 1) == "/" then
+		return relative
+	end
+	return base .. "/" .. relative
+end
+
+local bit = require("bit")
+
+local function generate_cache_key(highlights)
+	local serialized_highlights = vim.inspect(highlights)
+
+	local hash = 5381
+	for i = 1, #serialized_highlights do
+		local char = string.byte(serialized_highlights, i)
+		hash = bit.band(bit.bxor(hash * 33, char), 0xFFFFFFFF)
+	end
+
+	return tostring(hash)
+end
+
+local cache_dir = require("palette").get("cache_dir")
+
+local function cache_path(cache_key)
+	if vim.fn.isdirectory(cache_dir) == 0 then
+		os.execute("mkdir -p " .. cache_dir)
+	end
+
+	local _cache_path = path_join(cache_dir, cache_key .. ".vim")
+
+	if vim.fn.filereadable(_cache_path) == 1 then
+		return _cache_path
+	end
+
+	return false
+end
+
+local function cache_save(cache, cache_key)
+	local _cache_path = path_join(cache_dir, cache_key .. ".vim")
+	local cache_file = io.open(_cache_path, "w")
+
+	if cache_file then
+		for _, cmd in pairs(cache) do
+			cache_file:write(cmd .. "\n")
+		end
+		cache_file:close()
+	else
+		print("Error: colorscheme could not open cache file for writing: " .. _cache_path)
+	end
+end
+
 -- map the lua highlight tables into vim highlight commands
-M.apply_highlight_groups = function(highlights)
-	-- clear all current highlights
+M.apply_highlight_groups = function(highlights, caching)
+	local cache_key = generate_cache_key(highlights)
+
 	if vim.g.colors_name then
 		vim.cmd("highlight clear")
 	end
 
+	-- load from cache and return, if cache file exists..
+	if caching then
+		local _cache_path = cache_path(cache_key)
+		if _cache_path then
+			print("LOADING CACHE: " .. _cache_path)
+			vim.cmd("source " .. _cache_path)
+			return
+		end
+	end
+
+	local cache = {}
 	for _, highlight in pairs(highlights) do
 		local hlgroup = highlight[1]
 
@@ -112,8 +177,12 @@ M.apply_highlight_groups = function(highlights)
 			gui = ""
 		end
 
-		vim.cmd(string.format("highlight %s %s %s %s", hlgroup, guifg, guibg, gui))
+		local cmd = string.format("highlight %s %s %s %s", hlgroup, guifg, guibg, gui)
+		table.insert(cache, cmd)
+		vim.cmd(cmd)
 	end
+
+	cache_save(cache, cache_key)
 end
 
 return M
