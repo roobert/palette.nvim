@@ -18,7 +18,7 @@ Caching ensures themes are performant.
 
 Build easily distributable themes using the provided `build` script.
 
-Generate other application color schemes, such as `LS_COLORS` for matching terminal feel.
+Generate application color schemes, such as for `LS_COLORS` and `iterm2` for matching terminal feel.
 
 ## Theory
 
