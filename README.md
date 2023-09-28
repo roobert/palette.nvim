@@ -425,6 +425,19 @@ cp -v vivid/themes/* ~/.config/vivid/themes/
 LS_COLORS="$(vivid generate palette_dark)"
 ```
 
+## Support for `iterm2`
+
+![iterm2 screenshot](https://github.com/roobert/palette.nvim/assets/226654/1ba8953d-2ce8-4c1c-8e7b-4f7e776f9859)
+
+
+Generate theme for iterm2:
+
+```bash
+./bin/iterm2.lua palette dark pastel > terminal/palette.itermcolors
+```
+
+Import the theme through `Settings -> Profiles -> Colors -> Import` and then select from the preset list.
+
 ## Custom Themes for Distribution
 
 It's always possible to share your theme by sharing a code block like this:
