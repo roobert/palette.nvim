@@ -32,8 +32,9 @@ return {
 			accent2 = "#B1AA55",
 			accent3 = "#56A665",
 			accent4 = "#568FA0",
-			accent5 = "#B15564",
-			accent6 = "#9056A6",
+			accent5 = "#506090",
+			accent6 = "#B15564",
+			accent7 = "#9056A6",
 		},
 
 		bright = {
@@ -42,8 +43,9 @@ return {
 			accent2 = "#D6CC6A",
 			accent3 = "#6AD682",
 			accent4 = "#6AB7D6",
-			accent5 = "#D66A7E",
-			accent6 = "#B36AD6",
+			accent5 = "#6097D6",
+			accent6 = "#D66A7E",
+			accent7 = "#B36AD6",
 		},
 
 		pastel = {
@@ -52,8 +54,9 @@ return {
 			accent2 = "#D9D87E",
 			accent3 = "#A5D9A7",
 			accent4 = "#8BB9C8",
-			accent5 = "#C9A1D3",
-			accent6 = "#B8A1D9",
+			accent5 = "#7B9CC8",
+			accent6 = "#C9A1D3",
+			accent7 = "#B8A1D9",
 		},
 	},
 

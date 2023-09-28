@@ -123,7 +123,7 @@ The highlight groups are spit into [multiple files](https://github.com/roobert/p
 The highlight groups use the following colors:
 
 - 9 main colors, named: `color0`-`color8`
-- 7 accent colors, named: `accent0`-`accent8`
+- 7 accent colors, named: `accent0`-`accent7`
 - 5 state colors, named: `error`, `warning`, `hint`, `ok`, `info`
 
 Additional colors can be added to any palette, with any name, and then used in custom [highlight overrides](https://github.com/roobert/palette.nvim/tree/main#overriding-highlight-groups---built-in-method).
