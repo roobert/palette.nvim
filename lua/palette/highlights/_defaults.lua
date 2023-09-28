@@ -8,6 +8,7 @@ local s = require("palette.theme").state
 -- { "<highlight>", "<fg>", "<bg>", {m.italic, "bold", "underline" } }
 return {
 	-- Default window, etc. bg = None is transparent..
+	{ "Whitespace", m.color2 },
 	{ "Normal", m.fg, m.bg },
 	{ "NormalFloat", m.fg },
 	{ "FloatBorder", m.color8, m.bg },
@@ -16,9 +17,6 @@ return {
 
 	-- End of buffer: ~'s
 	{ "EndOfBuffer", m.color3 },
-
-	-- Indent Lines
-	{ "IndentBlanklineChar", m.color2 },
 
 	-- Special characters
 	{ "Special", m.color3 },
