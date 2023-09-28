@@ -516,6 +516,6 @@ A build script is provided and can be used like this:
 ./bin/build.sh dust dusk pastel pastel
 ```
 
-6. Optionally add support for [LS_COLORS](https://github.com/roobert/palette.nvim/tree/main#support-for-ls_colors).
+6. Optionally add support for [LS_COLORS](https://github.com/roobert/palette.nvim/tree/main#support-for-ls_colors) and [iterm2](https://github.com/roobert/palette.nvim#support-for-iterm2).
 7. Update the `README.md` with screenshots, etc.
 8. Release your theme to the world!
