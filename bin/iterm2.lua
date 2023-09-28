@@ -14,8 +14,8 @@ function printTable(tbl, indent)
 end
 
 local function colorToComponents(colorCode)
-	if colorCode:sub(1, 1) == "#" then -- Check for '#' prefix
-		colorCode = colorCode:sub(2) -- Remove '#' prefix if present
+	if colorCode:sub(1, 1) == "#" then
+		colorCode = colorCode:sub(2)
 	end
 	local r_str, g_str, b_str = colorCode:sub(1, 2), colorCode:sub(3, 4), colorCode:sub(5, 6)
 	local r = tonumber(r_str, 16) / 255
@@ -44,7 +44,6 @@ if not main_color_table or not accent_color_table then
 	os.exit(1)
 end
 
--- Color Processing
 local color_entries = {}
 local accent_mappings = {
 	{ 1, "accent0" },
@@ -80,19 +79,6 @@ local function addColorEntry(key, alpha, red, green, blue)
 	table.insert(color_entries, entry)
 end
 
--- Add entries for ANSI 0 and 7
-local ansi0_r, ansi0_g, ansi0_b = colorToComponents(main_color_table.color0)
-addColorEntry("Ansi " .. 0 .. " Color", 1, ansi0_r, ansi0_g, ansi0_b)
-
-local ansi7_r, ansi7_g, ansi7_b = colorToComponents(main_color_table.color8)
-addColorEntry("Ansi " .. 7 .. " Color", 1, ansi7_r, ansi7_g, ansi7_b)
-
-for _, mapping in ipairs(accent_mappings) do
-	local ansi_number, accent_name = table.unpack(mapping)
-	local r, g, b = colorToComponents(accent_color_table[accent_name])
-	addColorEntry("Ansi " .. ansi_number .. " Color", 1, r, g, b)
-end
-
 function LightenDarkenColor(col, amt)
 	col = tonumber(col, 16)
 	local r = ((col >> 16) & 0xFF) * (1 + amt / 100)
@@ -104,8 +90,23 @@ function LightenDarkenColor(col, amt)
 	return string.format("#%02x%02x%02x", r, g, b)
 end
 
+-- foreground and background come from main palette..
+local ansi0_r, ansi0_g, ansi0_b = colorToComponents(main_color_table.color0)
+addColorEntry("Ansi " .. 0 .. " Color", 1, ansi0_r, ansi0_g, ansi0_b)
+
+local ansi7_r, ansi7_g, ansi7_b = colorToComponents(main_color_table.color8)
+addColorEntry("Ansi " .. 7 .. " Color", 1, ansi7_r, ansi7_g, ansi7_b)
+
+-- normal colors come from accent palette..
+for _, mapping in ipairs(accent_mappings) do
+	local ansi_number, accent_name = table.unpack(mapping)
+	local r, g, b = colorToComponents(accent_color_table[accent_name])
+	addColorEntry("Ansi " .. ansi_number .. " Color", 1, r, g, b)
+end
+
 local brightening_amount = 20
 
+-- bright colors come from accent palette, but are brightened by brighting_amount
 for _, mapping in ipairs(accent_mappings) do
 	local ansi_number, accent_name = table.unpack(mapping)
 	local original_hex_color = accent_color_table[accent_name]
@@ -114,6 +115,7 @@ for _, mapping in ipairs(accent_mappings) do
 	addColorEntry("Ansi " .. ansi_number + 8 .. " Color", 1, r, g, b)
 end
 
+-- misc colors
 local r, g, b
 r, g, b = colorToComponents(main_color_table.color7)
 addColorEntry("Foreground Color", 1, r, g, b)
@@ -149,7 +151,7 @@ local xml_output = string.format(
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-    %s
+%s
 </dict>
 </plist>
 ]],
