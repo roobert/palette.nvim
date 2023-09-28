@@ -2,7 +2,7 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-        <key>Ansi 0 Color</key>
+    <key>Ansi 0 Color</key>
     <dict>
         <key>Alpha Component</key>
         <real>1.00</real>
