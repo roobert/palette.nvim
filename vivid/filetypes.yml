@@ -85,7 +85,6 @@ markup:
 
 programming:
   foreground: color8
-  font-style: bold
 
 media:
   image:

@@ -18,8 +18,9 @@ colors:
   accent2: 'D9D87E'
   accent3: 'A5D9A7'
   accent4: '8BB9C8'
-  accent5: 'C9A1D3'
-  accent6: 'B8A1D9'
+  accent5: '7B9CC8'
+  accent6: 'C9A1D3'
+  accent7: 'B8A1D9'
 
 core:
   normal_text:
@@ -108,7 +109,6 @@ markup:
 
 programming:
   foreground: color8
-  font-style: bold
 
 media:
   image:
