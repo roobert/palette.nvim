@@ -20,11 +20,16 @@ for i = #files, 1, -1 do
 	end
 end
 
-local custom_highlights = require("palette").get("custom_highlights") or {}
-
 -- override the highlights with the custom highlights
-for _, highlight in ipairs(custom_highlights) do
-	table.insert(highlights, highlight)
+local custom_highlight_group = require("palette").get("custom_highlight_group") or false
+local custom_highlight_groups = require("palette").get("custom_highlight_groups") or {}
+
+if custom_highlight_groups and custom_highlight_group then
+	local custom_highlights_table = custom_highlight_groups[custom_highlight_group]
+
+	for _, highlight in ipairs(custom_highlights_table) do
+		table.insert(highlights, highlight)
+	end
 end
 
 return highlights

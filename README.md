@@ -337,18 +337,21 @@ An example of overriding specific highlight groups using the built-in method:
 
     require("palette").setup({
       -- custom highlight groups can override any highlight groups
-      -- add one table per override:
-      custom_highlights = {
-        {
-          -- highlight group, or nil
-          "Normal",
-          -- foreground, or nil
-          a.accent0,
-          -- background, or nil
-          "#00ff00",
-          -- style(s) to apply, or nil
-          { "italic", "underline", "bold" },
-        },
+      custom_highlight_group = "group_name",
+      custom_highlight_groups = {
+        group_name = {
+          -- add one table per override:
+          {
+            -- highlight group, or nil
+            "Normal",
+            -- foreground, or nil
+            a.accent0,
+            -- background, or nil
+            "#00ff00",
+            -- style(s) to apply, or nil
+            { "italic", "underline", "bold" },
+          },
+        }
       }
     })
 
