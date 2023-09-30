@@ -23,8 +23,8 @@ end
 local custom_highlights = require("palette").get("custom_highlights") or {}
 
 -- override the highlights with the custom highlights
-for key, value in pairs(custom_highlights) do
-	highlights[key] = value
+for _, highlight in ipairs(custom_highlights) do
+	table.insert(highlights, highlight)
 end
 
 return highlights
