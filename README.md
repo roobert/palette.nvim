@@ -421,14 +421,17 @@ mkdir -p ~/.config/vivid/themes
 
 cp -v vivid/themes/* ~/.config/vivid/themes/
 
+# brew install coreutils
 # add to ~/.zshrc or ~/.bashrc
+if which gdircolors > /dev/null 2>&1; then
+  eval $(gdircolors)
+fi
 LS_COLORS="$(vivid generate palette_dark)"
 ```
 
 ## Support for `iterm2`
 
 ![iterm2 screenshot](https://github.com/roobert/palette.nvim/assets/226654/1ba8953d-2ce8-4c1c-8e7b-4f7e776f9859)
-
 
 Generate theme for iterm2:
 
