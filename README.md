@@ -7,7 +7,6 @@
 <p align="center">
     <img src="https://github.com/roobert/palette.nvim/assets/226654/56afa310-04f0-42cc-9901-a212d1853ee7" />
 </p>
-
 ## About
 
 _Palette_ is a Neovim theme system to make creating and customising themes easy.
@@ -64,6 +63,7 @@ Custom palettes can be defined like this:
 ```lua
 {
   "roobert/palette.nvim",
+  lazy = false,
   priority = 1000,
   config = function()
     require("palette").setup({
@@ -162,6 +162,7 @@ A custom derived theme inspired by Life Aquatic's Team Zissou colors:
 ```lua
 {
   'roobert/palette.nvim',
+  lazy = false,
   priority = 1000,
   config = function()
     vim.cmd("colorscheme palette")
@@ -178,6 +179,7 @@ Example overriding the default palettes:
 ```lua
 {
   "roobert/palette.nvim",
+  lazy = false,
   priority = 1000,
   config = function()
     require("palette").setup({
@@ -204,6 +206,7 @@ An example of using a custom _main_ palette:
 ```lua
 {
   "roobert/palette.nvim",
+  lazy = false,
   priority = 1000,
   config = function()
     require("palette").setup({
@@ -246,6 +249,7 @@ An example of using a _derived_ theme based on the built-in _dark_ palette, with
 ```lua
 {
   "roobert/palette.nvim",
+  lazy = false,
   priority = 1000,
   config = function()
     require("palette").setup({
@@ -290,6 +294,7 @@ example a default color is being overridden:
 ```lua
 {
     "roobert/palette.nvim",
+    lazy = false,
     priority = 1000,
     config = function()
         -- Reference the dark palette
@@ -323,6 +328,7 @@ An example of overriding specific highlight groups using the built-in method:
 ```lua
 {
   "roobert/palette.nvim",
+  lazy = false,
   priority = 1000,
   config = function()
     -- alias so we can easily reference theme colors
@@ -360,6 +366,7 @@ Alternatively highlight groups can be overridden in the normal way:
 ```lua
 {
   "roobert/palette.nvim",
+  lazy = false,
   priority = 1000,
   config = function()
     require("palette").setup({})
@@ -383,6 +390,7 @@ To adjust caching or set a custom cache path:
 ```lua
 {
   "roobert/palette.nvim",
+  lazy = false,
   priority = 1000,
   config = function()
     require("palette").setup({
@@ -442,6 +450,7 @@ It's always possible to share your theme by sharing a code block like this:
 ```lua
 {
   "roobert/palette.nvim",
+  lazy = false,
   priority = 1000,
   config = function()
     require("palette").setup({
@@ -485,6 +494,7 @@ However, if you'd like to be able to give people a code block like this:
 ```lua
 {
   "username/colorscheme_name.nvim",
+  lazy = false,
   priority = 1000,
   config = function()
     vim.cmd([[colorscheme colorscheme_name]])
