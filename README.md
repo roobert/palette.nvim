@@ -7,6 +7,7 @@
 <p align="center">
     <img src="https://github.com/roobert/palette.nvim/assets/226654/56afa310-04f0-42cc-9901-a212d1853ee7" />
 </p>
+
 ## About
 
 _Palette_ is a Neovim theme system to make creating and customising themes easy.
