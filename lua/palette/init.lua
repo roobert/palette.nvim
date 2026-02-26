@@ -33,16 +33,10 @@ function M.load()
 
 	-- options
 	vim.o.termguicolors = true
-	vim.o.background = "dark"
+	vim.o.background = config.palettes.main == "light" and "light" or "dark"
 
-	-- override border types for hover and diagnostic floats..
+	-- override border types for diagnostic floats
 	vim.diagnostic.config({ float = { border = "rounded" } })
-
-	local float = { focusable = true, style = "minimal", border = "rounded" }
-	vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, float)
-	vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, float)
-
-	require("lspconfig.ui.windows").default_options.border = "single"
 
 	-- get merged highlight groups
 	local highlights = require("palette.highlights")
